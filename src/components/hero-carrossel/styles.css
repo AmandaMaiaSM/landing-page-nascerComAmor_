@@ -1,0 +1,63 @@
+.carrossel-container {
+  width: 100%;
+  height: 100vh; /* fallback para navegadores sem suporte a dvh */
+  height: 100dvh; /* ocupa a altura visível real, sem cortar conteúdo atrás da UI do navegador mobile */
+  position: relative;
+  overflow: hidden;
+}
+
+.carrossel-imagem {
+  object-fit: cover;
+  z-index: 0;
+}
+
+.carrossel-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.carrossel-overlay {
+  position: absolute;
+  top: 50%;
+  left: 5%; /* margem da esquerda */
+  transform: translateY(-50%); /* centraliza verticalmente */
+  background: rgba(0, 0, 0, 0.4);
+  color: var(--cor-white);
+  text-align: left; /* texto alinhado à esquerda */
+  padding: 2rem;
+  border-radius: 50px;
+  max-width: 600px;
+}
+
+.carrossel-overlay h1 {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+    color: var( --cor-white); /* usa cor definida */
+}
+
+.carrossel-overlay p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.carrossel-button {
+  background: var(--cor-whatsapp);
+  color: var(--cor-white);
+  padding: 1rem 2rem;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.carrossel-button:hover {
+  background: #1ebe5d; /* tom mais escuro do verde */
+}

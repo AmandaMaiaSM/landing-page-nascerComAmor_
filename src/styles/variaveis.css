@@ -1,0 +1,18 @@
+:root {
+  /* Cores Principais */
+  --cor-primary: #8B2F3F;
+  --cor-faq: #FBF9FA;
+  --cor-background: #FBF9FA;
+
+  /* Cores de Destaque */
+  --cor-whatsapp: #25D366;
+  --cor-notification-red: #FF3B30;
+  --cor-estrelas: #D4AF37;
+
+  /* Texto e Links */
+  --cor-links-titulos: #7A2D3C;
+
+  /* Neutras */
+  --cor-white: #FFFFFF;
+  --cor-texto: #4A4A4A;
+}

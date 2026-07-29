@@ -1,0 +1,164 @@
+/* SECTION */
+
+.quem-somos {
+  width: 100%;
+  padding: 6rem 2rem;
+  background-color: var(--cor-background);
+
+}
+
+/*LAYOUT */
+
+.quem-somos-content {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+
+  flex-direction: row-reverse;
+}
+
+.quem-somos-texto,
+.quem-somos-imagem {
+  flex: 1;
+}
+
+/*TEXTO*/
+
+.quem-somos-texto h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+
+  color: var(--cor-primary);
+
+  margin-bottom: 1.5rem;
+}
+
+.quem-somos-texto h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.5;
+
+  color: var(--cor-texto);
+
+  margin-bottom: 2rem;
+}
+
+.quem-somos-texto p {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+
+  color: #000000;
+
+  margin-bottom: 1.5rem;
+}
+
+/*BOTÃO*/
+
+.quem-somos-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 1rem;
+
+  padding: 1rem 2rem;
+
+  background-color: var(--cor-primary);
+  color: var(--cor-white);
+
+  border-radius: 999px;
+
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.quem-somos-button:hover {
+  background-color: var(--cor-white);
+  color: var(--cor-primary);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* IMAGEM*/
+
+.quem-somos-imagem {
+  display: flex;
+}
+
+.quem-somos-imagem img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/*TABLET*/
+
+@media (max-width: 1024px) {
+  .quem-somos-content {
+    gap: 2.5rem;
+  }
+
+  .quem-somos-texto h1 {
+    font-size: 3rem;
+  }
+
+  .quem-somos-texto h2 {
+    font-size: 1.5rem;
+  }
+
+  .quem-somos-texto p {
+    font-size: 1.1rem;
+  }
+}
+
+/* MOBILE*/
+
+@media (max-width: 768px) {
+  .quem-somos {
+    padding: 4rem 1.5rem;
+  }
+
+  .quem-somos-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .quem-somos-texto h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .quem-somos-texto h2 {
+    font-size: 1.3rem;
+  }
+
+  .quem-somos-texto p {
+    font-size: 1rem;
+  }
+
+  .quem-somos-button {
+    width: 100%;
+  }
+
+  .quem-somos-imagem img {
+    border-radius: 16px;
+  }
+}

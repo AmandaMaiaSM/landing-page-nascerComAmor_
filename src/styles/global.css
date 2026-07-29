@@ -1,0 +1,34 @@
+@import "./variaveis.css";
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--cor-background);
+  color: var(--cor-texto);
+  min-height: 100vh;
+}
+
+/* Compensa a altura do header sticky ao rolar para âncoras */
+#inicio,
+#quem-somos,
+#servicos,
+#profissionais,
+#depoimentos,
+#faq,
+#contato {
+  scroll-margin-top: 90px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
