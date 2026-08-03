@@ -1,12 +1,57 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
 import { services } from "@/data/services";
+import type { Service } from "@/data/services";
 import "./styles.css";
 
 const BREAKPOINT_QUERY = "(max-width: 1024px)";
 const SWIPE_THRESHOLD = 50;
+const LIMITE_DESCRICAO_SERVICO = 150;
+
+function CardServico({ servico }: { servico: Service }) {
+  const [descAberta, setDescAberta] = useState(false);
+
+  const descricaoLonga = servico.description.length > LIMITE_DESCRICAO_SERVICO;
+
+  return (
+    <div className="card">
+
+      <div className="icone">
+        {servico.icon}
+      </div>
+
+      <h3>{servico.name}</h3>
+
+      <p className={`servico-descricao${descAberta ? " aberta" : ""}`}>
+        {servico.description}
+      </p>
+
+      {descricaoLonga && (
+        <button
+          type="button"
+          className={`servico-ver-mais${descAberta ? " aberto" : ""}`}
+          onClick={() => setDescAberta((v) => !v)}
+          aria-expanded={descAberta}
+        >
+          {descAberta ? "Ver menos" : "Ver mais"}
+          <ChevronDown size={16} className="servico-ver-mais-icone" aria-hidden="true" />
+        </button>
+      )}
+
+      <a
+        href="https://api.whatsapp.com/message/ZEUOZNUWMSWJM1?autoload=1&app_absent=0&utm_source=ig"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bt-saiba-mais-servicos"
+      >
+        Saiba Mais
+      </a>
+
+    </div>
+  );
+}
 
 export default function Servicos() {
   const [pagina, setPagina] = useState(0);
@@ -103,31 +148,7 @@ export default function Servicos() {
         >
 
           {servicosVisiveis.map((servico) => (
-            <div
-              key={servico.name}
-              className="card"
-            >
-
-              <div className="icone">
-                {servico.icon}
-              </div>
-
-              <h3>{servico.name}</h3>
-
-              <p>
-                Atendimento humanizado e especializado.
-              </p>
-
-              <a
-                href="https://api.whatsapp.com/message/ZEUOZNUWMSWJM1?autoload=1&app_absent=0&utm_source=ig"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bt-saiba-mais-servicos"
-              >
-                Saiba Mais
-              </a>
-
-            </div>
+            <CardServico key={servico.name} servico={servico} />
           ))}
 
         </div>

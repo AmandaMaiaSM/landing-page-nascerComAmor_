@@ -6,6 +6,7 @@ import type { StaticImageData } from "next/image";
 import { ChevronLeft, ChevronRight, ChevronDown, Check } from "lucide-react";
 import "./styles.css";
 
+import Giselia_Vasconcelos from "@/assets/profissionais/Giselia_Vasconcelos .jpeg";
 import adrianaImg from "@/assets/profissionais/adriana-amancio-lopes.jpeg";
 import cynthiaImg from "@/assets/profissionais/cynthia-carvalho.jpeg";
 import yasmineImg from "@/assets/profissionais/yasmine-alencar.jpeg";
@@ -28,6 +29,24 @@ interface Profissional {
 
 // Para adicionar novos profissionais, basta inserir um novo objeto neste array.
 const profissionais: Profissional[] = [
+
+  {
+    id: 0,
+    nome: "Giselia Vasconcelos",
+    cargo: "Enfermeira obstetra e neonatologista",
+    registro: "COREN 026.052",
+    especialidades: [
+      "Enfermagem Obstétrica",
+      "Neonatologia",
+      "Doula",
+      "Consultoria em Amamentação",
+      "Laserterapia",
+      "Urgência e Emergência",
+      "Saúde da Família"
+    ],
+    descricao: "Formada pela Universidade Federal do Amazonas com pós-graduação em obstetrícia e neonatologia, especialização em urgência e emergência e saúde da família. Há mais de 20 anos fazendo partos e ajudando mamães nesse momento delicado.",
+    foto: Giselia_Vasconcelos
+  },
   {
 
     id: 1,

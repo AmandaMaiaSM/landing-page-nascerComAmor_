@@ -102,6 +102,58 @@
   margin-bottom: 2rem;
 }
 
+.servico-descricao {
+  margin-bottom: 0.75rem;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.servico-descricao.aberta {
+  display: block;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+}
+
+.servico-ver-mais {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  margin: 0 0 1.25rem;
+  padding: 0;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.servico-ver-mais:hover {
+  text-decoration: underline;
+}
+
+.servico-ver-mais:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.servico-ver-mais-icone {
+  transition: transform 0.25s ease;
+}
+
+.servico-ver-mais.aberto .servico-ver-mais-icone {
+  transform: rotate(180deg);
+}
+
 .bt-saiba-mais-servicos {
   margin-top: auto;
 
