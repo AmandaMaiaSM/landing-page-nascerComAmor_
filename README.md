@@ -8,7 +8,7 @@ Landing page em [Next.js](https://nextjs.org) para a **Nascer com Amor**, com cu
 - [React 19](https://react.dev) + TypeScript
 - [lucide-react](https://lucide.dev) e [react-icons](https://react-icons.github.io/react-icons/) para ícones
 
-> ⚠️ Este projeto usa uma versão do Next.js com mudanças que quebram compatibilidade com o que ferramentas e modelos de IA costumam "saber" por padrão. Antes de programar, veja os avisos em [`AGENTS.md`](./AGENTS.md).
+> Este projeto usa uma versão do Next.js com mudanças que quebram compatibilidade com o que ferramentas e modelos de IA costumam "saber" por padrão. Antes de programar, veja os avisos em [`AGENTS.md`](./AGENTS.md).
 
 ## Estrutura do projeto
 
@@ -69,3 +69,11 @@ node scripts/crop-professional-photos.js
 ## Deploy
 
 O deploy pode ser feito na [Vercel](https://vercel.com/new) ou qualquer outra plataforma compatível com Next.js. Veja a [documentação de deploy do Next.js](https://nextjs.org/docs/app/building-your-application/deploying) para mais detalhes.
+
+<img width="1896" height="1030" alt="image" src="https://github.com/user-attachments/assets/5650ba76-38e6-4a1d-8fe3-563e16fe9e6c" />
+<img width="1906" height="1031" alt="image" src="https://github.com/user-attachments/assets/15046c81-13cc-49fc-9ebd-7b1aa270b477" />
+<img width="1905" height="1011" alt="image" src="https://github.com/user-attachments/assets/922de90e-4a31-42de-9ec5-66eb0430a862" />
+<img width="1896" height="1027" alt="image" src="https://github.com/user-attachments/assets/cf01570a-46da-4bab-a14d-c7ee1de38711" />
+<img width="1897" height="1017" alt="image" src="https://github.com/user-attachments/assets/c8bf9d37-f80a-4554-8e74-7857875a3d84" />
+<img width="1901" height="1027" alt="image" src="https://github.com/user-attachments/assets/e9820b48-51ad-4fd0-adc9-af7cfa69569f" />
+<img width="1902" height="653" alt="image" src="https://github.com/user-attachments/assets/da84619d-579c-4217-8acb-34851d3195da" />
