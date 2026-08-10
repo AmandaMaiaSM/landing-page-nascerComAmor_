@@ -76,8 +76,10 @@ Na Nascer com Amor, organizamos esse momento de forma personalizada, criando uma
     icon: <FaHandHoldingHeart />, 
     description: "A doula oferece suporte emocional, físico e informativo durante a gestação, trabalho de parto, parto e pós-parto, proporcionando acolhimento e contribuindo para uma experiência mais tranquila e positiva."
   },
-  { name: "Drenagem", icon: <FaSpa />, description: "" },
-  { name: "E-lib", icon: <FaHeartPulse />, description: "" },
+  { name: " Drenagem Linfática",
+    icon: <FaSpa />,
+    description: 'A drenagem linfática é uma técnica terapêutica que estimula o sistema linfático, auxiliando na redução de inchaços, retenção de líquidos e desconfortos corporais. É indicada para gestantes (quando liberada pelo profissional), puérperas, pós-operatório e pessoas que desejam melhorar a circulação e promover bem-estar.'
+  },
 
   { name: "Fisioterapia pélvica", 
     icon: <MdOutlineMedicalServices />, 
@@ -140,7 +142,19 @@ Na Nascer com Amor, organizamos esse momento de forma personalizada, criando uma
     icon: <FaStethoscope />, 
     description: "O Teste do Olhinho, também conhecido como Teste do Reflexo Vermelho, é um exame simples, rápido e indolor, realizado nos primeiros dias de vida do bebê. Seu objetivo é identificar precocemente alterações oculares que podem comprometer a visão, permitindo diagnóstico e tratamento em tempo oportuno."
   },
-  { name: "Tratamento de assaduras em bebês", icon: <FaBaby />, description: "" },
-  { name: "Tratamento de diástase", icon: <MdOutlineMedicalServices />, description: "" },
-  { name: "Tratamento para síndrome mão-pé-boca", icon: <FaStethoscope />, description: "" },
+  { name: "Tratamento de assaduras em bebês", 
+    icon: <FaBaby />, 
+    description: `As assaduras podem causar dor, irritação e desconforto ao bebê. Na Nascer com Amor, realizamos avaliação especializada e utilizamos recursos terapêuticos, como a laserterapia de baixa potência, que acelera a cicatrização, reduz a inflamação, alivia a dor e favorece a regeneração da pele.
+    Além do tratamento, orientamos a família sobre os cuidados diários, higiene adequada e medidas preventivas para evitar novas lesões.`
+  },
+  { name: "Tratamento de Diástase Abdominal", 
+    icon: <MdOutlineMedicalServices />, 
+    description: `A diástase abdominal é o afastamento dos músculos retos do abdômen, condição comum durante a gestação e no pós-parto. Quando não tratada, pode causar dores lombares, fraqueza muscular, alterações posturais e comprometimento da funcionalidade do abdômen.
+    Na Nascer com Amor, realizamos avaliação individualizada e elaboramos um plano terapêutico que pode incluir fisioterapia pélvica, exercícios específicos, recursos terapêuticos e acompanhamento profissional, promovendo a recuperação da musculatura e a melhora da qualidade de vida.` 
+  },
+  { name: "Tratamento para síndrome mão-pé-boca", 
+    icon: <FaStethoscope />, 
+    description: `A síndrome mão-pé-boca é uma infecção viral comum na infância que pode provocar febre, lesões na boca e erupções nas mãos e pés, causando bastante desconforto.
+    Na Nascer com Amor, oferecemos tratamento de suporte com laserterapia de baixa potência, que auxilia na redução da dor, acelera a cicatrização das lesões orais e cutâneas e proporciona mais conforto durante a recuperação. O atendimento é realizado de forma humanizada, sempre associado às orientações necessárias para os cuidados em casa e ao acompanhamento médico quando indicado.` 
+  },
 ];

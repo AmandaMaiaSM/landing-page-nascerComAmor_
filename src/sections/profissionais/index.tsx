@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import type { StaticImageData } from "next/image";
 import { ChevronLeft, ChevronRight, ChevronDown, Check } from "lucide-react";
@@ -15,7 +15,9 @@ import gabriellyImg from "@/assets/profissionais/gabrielly-barros.jpeg";
 import henriqueImg from "@/assets/profissionais/henrique-augusto-mendes.jpeg";
 import ilanaImg from "@/assets/profissionais/ilana-castro.jpeg";
 import lainaImg from "@/assets/profissionais/laina-camila-sanches.jpeg";
+import luannaSaldanha from "@/assets/profissionais/luannaSaldanha.jpeg";
 import samiaImg from "@/assets/profissionais/samia-carine-varao.jpeg";
+import samya_Barros from "@/assets/profissionais/samyaBarros.jpeg";
 
 interface Profissional {
   id: number;
@@ -52,7 +54,7 @@ const profissionais: Profissional[] = [
     id: 1,
     nome: "Adriana Amancio Lopes",
     cargo: "Fisioterapeuta Pélvica e Massoterapeuta",
-    registro: "COREN",
+    registro: "COREN 387997-F",
     especialidades: [
       "Fisioterapia Pélvica",
       "Saúde da Mulher",
@@ -67,7 +69,7 @@ const profissionais: Profissional[] = [
     id: 2,
     nome: "Cynthia Carvalho",
     cargo: "Fisioterapeuta",
-    registro: "---",
+    registro: "COREN 414504-F",
     especialidades: [
       "Fisioterapeuta Pélvica",
       "Acompanhamento Gestacional",
@@ -78,14 +80,14 @@ const profissionais: Profissional[] = [
       "Constipação",
     ],
     descricao:
-      "Atua como fisioterapeuta pélvica, oferecendo acompanhamento gestacional, atendimento no pós-parto imediato, tratamento de diástase abdominal, dor durante a relação sexual, escapes urinários e constipação.",
+      "Atuo na prevenção, avaliação e tratamento das disfunções do assoalho pélvico feminino, acompanhando mulheres em todas as fases da vida, com foco na promoção da saúde, qualidade de vida e bem-estar, por meio de um atendimento humanizado e baseado em evidências.",
     foto: cynthiaImg,
   },
   {
     id: 3,
     nome: "Dra. Yasmine Alencar",
     cargo: "Médica",
-    registro: "---",
+    registro: "CRM MA 12971",
     especialidades: ["Consulta pediátrica pré-natal"],
     descricao:
       "Graduada em Medicina pela Universidade Federal do Maranhão (UFMA). Pós-graduada em Pediatria pela IPEMED – Afya e certificada em Suporte Avançado de Vida em Pediatria pela American Heart Association (AHA), por meio do CUREM. Realiza consultas pediátricas pré-natais, oferecendo orientação e acompanhamento para gestantes sobre os cuidados com o recém-nascido e a saúde infantil.",
@@ -95,7 +97,7 @@ const profissionais: Profissional[] = [
     id: 4,
     nome: "Elisa Fontinele de Carvalho",
     cargo: "Enfermeira, Obstetra, Neonatologista e Doula",
-    registro: "COREN: 796979-EO",
+    registro: "COREN 796979-EO",
     especialidades: [
       "Obstetrícia",
       "Neonatologia",
@@ -127,7 +129,7 @@ const profissionais: Profissional[] = [
     id: 6,
     nome: "Henrique Augusto Mendes",
     cargo: "Acupunturista e Terapeuta Integrativo",
-    registro: "---",
+    registro: "",
     especialidades: [
       "Acupuntura",
       "Auriculoterapia",
@@ -137,7 +139,11 @@ const profissionais: Profissional[] = [
       "Hipnoterapia",
     ],
     descricao:
-      "Atua com terapias integrativas voltadas para a promoção da saúde e bem-estar, oferecendo serviços de acupuntura, auriculoterapia, laserpuntura, eletropuntura, terapia neural e hipnoterapia para tratamento de dores e fobias. Também realiza atendimento focado no combate à dor e no auxílio à indução do parto, proporcionando um cuidado humanizado e individualizado.",
+      `Acupunturista de profissão e por amor.
+      Trabalho com acupuntura há mais de 5 anos e faço uso dela por mais de 22 anos
+      Como paciente e como terapeuta, creio na acupuntura como um tratamento natural, viável e de excelência 
+      Hoje atuo em diversas frentes como: indução de trabalho de parto, tendo atuado com todas as síndromes, principalmente as emocionais, ansiedade, depressão, entre as mais comuns.
+      `,
     foto: henriqueImg,
   },
   {
@@ -170,7 +176,22 @@ const profissionais: Profissional[] = [
   },
   {
     id: 9,
-    nome: "Sâmia Carine dos Santos Varão",
+    nome: "Luanna Saldanha",
+    cargo: "Nutricionista",
+    registro: "CRN-11: 22245/P",
+    especialidades: [
+      "Nutrição Materno Infantil",
+      "Nutrição no Autismo, TDAH e Síndrome de Down",
+      "Terapia Alimentar",
+      "Seletividade Alimentar",
+      "Introdução Alimentar"
+    ],
+    descricao: "Acredito que nutrir é um ato de amor, cuidado e acolhimento. Atuo com terapia alimentar, seletividade alimentar, introdução alimentar e acompanhamento nutricional de gestantes, lactantes e crianças, oferecendo um cuidado humanizado, individualizado e baseado em evidências.",
+    foto: luannaSaldanha
+  },
+  {
+    id: 10,
+    nome: "Samia Carine dos Santos Varão",
     cargo: "Enfermeira e Doula",
     registro: "COREN 750506",
     especialidades: [
@@ -183,16 +204,35 @@ const profissionais: Profissional[] = [
       "Pós-parto",
     ],
     descricao:
-      "---",
+      `Sou enfermeira, doula, educadora perinatal e pós-graduanda em Enfermagem Obstétrica e Neonatal, apaixonada pelo cuidado materno-infantil e pela assistência humanizada. Minha missão é caminhar ao lado das famílias desde a gestação até o pós-parto, oferecendo suporte técnico, emocional e baseado em evidências científicas.
+      Atuo como consultora em amamentação e aleitamento materno, educação perinatal, acompanhamento no ciclo gravídico-puerperal e terapias integrativas que promovem bem-estar, conforto e recuperação, como fotobiomodulação com laser e LED, taping gestacional e pós-parto e drenagem linfática manual. Também realizo o Chá de Bênçãos com pintura gestacional.`,
     foto: samiaImg,
-  }
+  },
+  {
+    id: 11,
+    nome: "Sâmya Barros dos Santos ",
+    cargo: "Fonoaudióloga",
+    registro: "CRFa: 8-13125",
+    especialidades: [
+      "Otoneurologia",
+      "Audiologia Clínica",
+      "Teste da Linguinha",
+      "Teste da Orelhinha (Emissões Otoacústicas)",
+      "Pós-frenectomia"
+    ],
+    descricao:
+      `Sou fonoaudióloga e atuo com foco na saúde e no desenvolvimento dos bebês desde os primeiros dias de vida, realizando teste da linguinha, orelhinha e acompanhamento terapêutico pós-frenectomia, auxiliando na recuperação da mobilidade e fortalecimento das funções orais, especialmente durante a amamentação. Meu trabalho é oferecer um atendimento humanizado voltado para as necessidades de cada família.
+Acredito que cada bebê merece um olhar atento e individualizado. Por isso, procuro acolher os pais, esclarecer dúvidas e conduzir cada atendimento com empatia, segurança e respeito ao tempo de cada criança, contribuindo para um desenvolvimento saudável desde o início da vida.`,
+    foto: samya_Barros,
+  },
+
 
 ];
 
 const BREAKPOINT_TABLET = "(max-width: 960px)";
 const BREAKPOINT_MOBILE = "(max-width: 640px)";
 const ESPECIALIDADES_VISIVEIS = 3;
-const LIMITE_DESCRICAO = 220;
+
 
 function getIniciais(nome: string): string {
   const partes = nome.trim().split(" ");
@@ -203,13 +243,36 @@ function getIniciais(nome: string): string {
 function CardProfissional({ prof }: { prof: Profissional }) {
   const [espAberto, setEspAberto] = useState(false);
   const [descAberta, setDescAberta] = useState(false);
+  const [descricaoLonga, setDescricaoLonga] = useState(false);
+  const descRef = useRef<HTMLParagraphElement>(null);
+  const descAbertaRef = useRef(descAberta);
 
   const temMaisEsp = prof.especialidades.length > ESPECIALIDADES_VISIVEIS;
   const especialidadesVisiveis = espAberto
     ? prof.especialidades
     : prof.especialidades.slice(0, ESPECIALIDADES_VISIVEIS);
 
-  const descricaoLonga = prof.descricao.length > LIMITE_DESCRICAO;
+  useEffect(() => {
+    descAbertaRef.current = descAberta;
+  }, [descAberta]);
+
+  useEffect(() => {
+    const elemento = descRef.current;
+    if (!elemento) return;
+
+    const verificarEstouro = () => {
+      // Enquanto expandido o clamp é removido e scrollHeight === clientHeight,
+      // então ignora remedições disparadas pelo próprio toggle de abrir/fechar.
+      if (descAbertaRef.current) return;
+      setDescricaoLonga(elemento.scrollHeight > elemento.clientHeight);
+    };
+
+    verificarEstouro();
+
+    const observer = new ResizeObserver(verificarEstouro);
+    observer.observe(elemento);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <article className="profissionais__card">
@@ -258,7 +321,7 @@ function CardProfissional({ prof }: { prof: Profissional }) {
           </button>
         )}
 
-        <p className={`profissionais__descricao${descAberta ? " aberta" : ""}`}>
+        <p ref={descRef} className={`profissionais__descricao${descAberta ? " aberta" : ""}`}>
           {prof.descricao}
         </p>
 

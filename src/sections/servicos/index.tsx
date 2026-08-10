@@ -8,12 +8,34 @@ import "./styles.css";
 
 const BREAKPOINT_QUERY = "(max-width: 1024px)";
 const SWIPE_THRESHOLD = 50;
-const LIMITE_DESCRICAO_SERVICO = 150;
 
 function CardServico({ servico }: { servico: Service }) {
   const [descAberta, setDescAberta] = useState(false);
+  const [descricaoLonga, setDescricaoLonga] = useState(false);
+  const descRef = useRef<HTMLParagraphElement>(null);
+  const descAbertaRef = useRef(descAberta);
 
-  const descricaoLonga = servico.description.length > LIMITE_DESCRICAO_SERVICO;
+  useEffect(() => {
+    descAbertaRef.current = descAberta;
+  }, [descAberta]);
+
+  useEffect(() => {
+    const elemento = descRef.current;
+    if (!elemento) return;
+
+    const verificarEstouro = () => {
+      // Enquanto expandido o clamp é removido e scrollHeight === clientHeight,
+      // então ignora remedições disparadas pelo próprio toggle de abrir/fechar.
+      if (descAbertaRef.current) return;
+      setDescricaoLonga(elemento.scrollHeight > elemento.clientHeight);
+    };
+
+    verificarEstouro();
+
+    const observer = new ResizeObserver(verificarEstouro);
+    observer.observe(elemento);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="card">
@@ -24,7 +46,7 @@ function CardServico({ servico }: { servico: Service }) {
 
       <h3>{servico.name}</h3>
 
-      <p className={`servico-descricao${descAberta ? " aberta" : ""}`}>
+      <p ref={descRef} className={`servico-descricao${descAberta ? " aberta" : ""}`}>
         {servico.description}
       </p>
 

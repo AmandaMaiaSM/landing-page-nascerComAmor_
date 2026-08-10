@@ -31,7 +31,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
   {
     label: "Facebook",
-    url: "https://www.facebook.com/nascercomamor",
+    url: "https://www.facebook.com/share/1HKUzKmZYw/?mibextid=wwXIfr",
     icon: FaFacebookF,
     ariaLabel: "Visite nossa página no Facebook (abre em nova aba)",
   },

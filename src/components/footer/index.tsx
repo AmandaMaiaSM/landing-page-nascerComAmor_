@@ -18,14 +18,8 @@ import logoImg from "@/assets/logo-nascer-com-amor.png";
 import "./styles.css";
 
 const REDES_SOCIAIS = [
-  { icon: FaFacebookF,   label: "Facebook",  url: "https://www.facebook.com/nascercomamor" },
-  { icon: FaTwitter,     label: "Twitter",   url: "#" },
-  { icon: FaLinkedinIn,  label: "LinkedIn",  url: "#" },
-  { icon: FaYoutube,     label: "YouTube",   url: "#" },
-  { icon: FaInstagram,   label: "Instagram", url: "https://www.instagram.com/nascercomamor_slz/?hl=pt-br" },
-  { icon: FaGooglePlusG, label: "Google+",   url: "#" },
-  { icon: FaPinterestP,  label: "Pinterest", url: "#" },
-  { icon: FaRss,         label: "RSS",       url: "#" },
+  { icon: FaFacebookF,   label: "Facebook",  url: "https://www.facebook.com/share/1HKUzKmZYw/?mibextid=wwXIfr" },
+  { icon: FaInstagram,   label: "Instagram", url: "https://www.instagram.com/nascercomamor_slz/?hl=pt-br" }
 ];
 
 const NAV_LINKS = [
@@ -59,15 +53,27 @@ export default function Footer() {
           {/* Endereço */}
           <div className="footer__item">
             <FaMapMarkerAlt className="footer__icone" aria-hidden="true" />
-            <span>Centro Empresarial no Shopping da Ilha - sala 801 (8º andar)</span>
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("Av. Daniel de La Touche, 987 - Maranhão Novo, São Luís - MA")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer__tel-link"
+            >
+              Centro Empresarial no Shopping da Ilha - sala 801 (8º andar)
+            </a>
           </div>
 
           {/* Telefone e horários lado a lado */}
           <div className="footer__linha">
             <div className="footer__item">
               <FaPhone className="footer__icone" aria-hidden="true" />
-              <a href="tel:+5598998000512" className="footer__tel-link">
-                (98) 99800-0512
+              <a
+                href="https://wa.me/message/ZEUOZNUWMSWJM1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__tel-link"
+              >
+                +55 98 8800-0512
               </a>
             </div>
 
