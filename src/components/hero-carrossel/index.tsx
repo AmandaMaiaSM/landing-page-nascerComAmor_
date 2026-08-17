@@ -41,7 +41,7 @@ const HeroCarrossel = () => {
             para mamães e bebês.
           </p>
           <a
-            href="https://wa.me/5598999999999"
+            href="https://api.whatsapp.com/message/ZEUOZNUWMSWJM1?autoload=1&app_absent=0"
             target="_blank"
             rel="noopener noreferrer"
             className="carrossel-button"

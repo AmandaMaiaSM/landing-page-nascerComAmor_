@@ -119,7 +119,11 @@ Na Nascer com Amor, organizamos esse momento de forma personalizada, criando uma
     icon: <FaChild />, 
     description: "Consultas pediátricas para acompanhamento do crescimento e desenvolvimento infantil, prevenção de doenças, vacinação, orientações aos pais e tratamento de diversas condições da infância." 
   },
-  { name: "Psicologia clínica", icon: <FaBrain />, description: "" },
+  /*
+  { name: "Psicologia clínica", 
+    icon: <FaBrain />, 
+    description: "" 
+  },*/
 
   { name: "Psicologia perinatal", 
     icon: <FaBrain />, 
