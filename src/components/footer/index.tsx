@@ -3,13 +3,7 @@
 import Image from "next/image";
 import {
   FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-  FaYoutube,
   FaInstagram,
-  FaGooglePlusG,
-  FaPinterestP,
-  FaRss,
   FaMapMarkerAlt,
   FaPhone,
   FaClock,
@@ -59,7 +53,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="footer__tel-link"
             >
-              Centro Empresarial no Shopping da Ilha - sala 801 (8º andar)
+              Centro Empresarial no Shopping da Ilha - Torre 2 sala 801 (8º andar)
             </a>
           </div>
 

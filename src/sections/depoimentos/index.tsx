@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { FaStar } from "react-icons/fa";
 import "./styles.css";
@@ -67,6 +67,7 @@ const depoimentos: Depoimento[] = [
 
 const BREAKPOINT_TABLET = "(max-width: 900px)";
 const BREAKPOINT_MOBILE = "(max-width: 600px)";
+const SWIPE_THRESHOLD = 50;
 
 function getIniciais(nome: string): string {
   const partes = nome.trim().split(" ");
@@ -77,6 +78,7 @@ function getIniciais(nome: string): string {
 export default function Depoimentos() {
   const [pagina, setPagina] = useState(0);
   const [cardsPorPagina, setCardsPorPagina] = useState(3);
+  const touchStartX = useRef<number | null>(null);
 
   useEffect(() => {
     const mqMobile = window.matchMedia(BREAKPOINT_MOBILE);
@@ -106,6 +108,22 @@ export default function Depoimentos() {
   const anterior = () =>
     setPagina((prev) => (prev === 0 ? totalPaginas - 1 : prev - 1));
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const delta = e.changedTouches[0].clientX - touchStartX.current;
+    touchStartX.current = null;
+
+    if (delta > SWIPE_THRESHOLD) {
+      anterior();
+    } else if (delta < -SWIPE_THRESHOLD) {
+      proximo();
+    }
+  };
+
   return (
     <section className="depoimentos">
 
@@ -125,7 +143,12 @@ export default function Depoimentos() {
           <ChevronLeft size={36} />
         </button>
 
-        <div className="depoimentos__grid" data-count={visiveis.length}>
+        <div
+          className="depoimentos__grid"
+          data-count={visiveis.length}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           {visiveis.map((dep) => (
             <div key={dep.id} className="depoimentos__card">
 

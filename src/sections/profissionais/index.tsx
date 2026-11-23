@@ -8,14 +8,20 @@ import "./styles.css";
 
 import Giselia_Vasconcelos from "@/assets/profissionais/Giselia_Vasconcelos .jpeg";
 import adrianaImg from "@/assets/profissionais/adriana-amancio-lopes.jpeg";
+import aryadnneImg from "@/assets/profissionais/Aryadnne_Cristinne_NV.jpg";
+import claudianaImg from "@/assets/profissionais/claudianaMelo_NV.jpeg";
 import cynthiaImg from "@/assets/profissionais/cynthia-carvalho.jpeg";
 import yasmineImg from "@/assets/profissionais/yasmine-alencar.jpeg";
+import elidianeImg from "@/assets/profissionais/ElidianeAraujo_NV.jpeg";
 import elisaImg from "@/assets/profissionais/elisa-fontinele.jpeg";
 import gabriellyImg from "@/assets/profissionais/gabrielly-barros.jpeg";
 import henriqueImg from "@/assets/profissionais/henrique-augusto-mendes.jpeg";
 import ilanaImg from "@/assets/profissionais/ilana-castro.jpeg";
+import josefaImg from "@/assets/profissionais/josefaRodrigues_NV.jpeg";
+import karlaImg from "@/assets/profissionais/KarlaMenethen_NV.jpeg";
 import lainaImg from "@/assets/profissionais/laina-camila-sanches.jpeg";
 import luannaSaldanha from "@/assets/profissionais/luannaSaldanha.jpeg";
+import marianaImg from "@/assets/profissionais/MarianaDoudement_NV.jpeg";
 import samiaImg from "@/assets/profissionais/samia-carine-varao.jpeg";
 import samya_Barros from "@/assets/profissionais/samyaBarros.jpeg";
 
@@ -65,6 +71,30 @@ const profissionais: Profissional[] = [
     foto: adrianaImg,
   },
   {
+    id: 12,
+    nome: "Aryadnne Cristinne Machado Costa",
+    cargo: "Médica",
+    registro: "CRM-MA 14.252",
+    especialidades: [],
+    descricao:
+      "Médica formada pela Universidade Federal do Maranhão (UFMA), dedicada a oferecer um atendimento humanizado, acolhedor e individualizado em todas as fases da vida. Acredita que cuidar vai além de tratar doenças: é ouvir, compreender e acompanhar cada paciente com atenção, respeito e carinho, buscando sempre promover saúde e bem-estar.",
+    foto: aryadnneImg,
+  },
+  {
+    id: 13,
+    nome: "Claudiana Melo",
+    cargo: "Psicóloga Clínica",
+    registro: "CRP 22/03094",
+    especialidades: [
+      "Psicologia Clínica",
+      "Avaliação Psicológica",
+      "Análise do Comportamento Aplicada ao Autismo",
+    ],
+    descricao: `A psicologia clínica, para mim, é um espaço de escuta, acolhimento e transformação. É onde as emoções ganham voz, os pensamentos são compreendidos e o autoconhecimento se torna possível. Acredito que, ao se conhecer melhor, a pessoa encontra clareza para fazer escolhas mais conscientes, desenvolver sua autonomia e viver de forma mais leve e verdadeira.
+Cuidar da sua saúde mental também é um ato de amor.`,
+    foto: claudianaImg,
+  },
+  {
 
     id: 2,
     nome: "Cynthia Carvalho",
@@ -92,6 +122,21 @@ const profissionais: Profissional[] = [
     descricao:
       "Graduada em Medicina pela Universidade Federal do Maranhão (UFMA). Pós-graduada em Pediatria pela IPEMED – Afya e certificada em Suporte Avançado de Vida em Pediatria pela American Heart Association (AHA), por meio do CUREM. Realiza consultas pediátricas pré-natais, oferecendo orientação e acompanhamento para gestantes sobre os cuidados com o recém-nascido e a saúde infantil.",
     foto: yasmineImg,
+  },
+  {
+    id: 15,
+    nome: "Elidiane Araujo",
+    cargo: "Enfermeira Obstetra e Neonatal e Doula",
+    registro: "COREN/MA 402-127",
+    especialidades: [
+      "Enfermagem Obstétrica e Neonatal",
+      "Doula",
+      "Assessoria em Aleitamento Materno",
+      "Taping Pós-parto",
+    ],
+    descricao: `Atuo na assistência materna e neonatal desde 2016.
+É um privilégio fazer parte de cada nascimento e poder cuidar da família em todos os momentos.`,
+    foto: elidianeImg,
   },
   {
     id: 4,
@@ -165,6 +210,36 @@ const profissionais: Profissional[] = [
     foto: ilanaImg,
   },
   {
+    id: 14,
+    nome: "Josefa Rodrigues Bahury",
+    cargo: "Fonoaudióloga",
+    registro: "CFFa N. 11.4141 - 8a. Região",
+    especialidades: [
+      "Motricidade Orofacial",
+      "Teste da Linguinha",
+      "Teste da Orelhinha",
+    ],
+    descricao: `Atendo recém-nascidos, bebês e crianças de forma humanizada, com muito amor, carinho e dedicação.
+Realizo triagens neonatais (testes da Linguinha e Orelhinha), avaliação, diagnóstico e reabilitação das funções e estruturas do sistema estomatognático.`,
+    foto: josefaImg,
+  },
+  {
+    id: 17,
+    nome: "Karla Menethen",
+    cargo: "Massoterapeuta",
+    registro: "",
+    especialidades: [
+      "Massoterapia",
+      "Terapias Manuais",
+      "Relaxamento e Alívio de Tensões",
+      "Atendimento a Gestantes",
+      "Atendimento a Idosos",
+    ],
+    descricao: `Profissional com 14 anos de experiência em massoterapia, formada pelo CTO – Centro de Terapias Orientais, em São Luís (2012).
+Atuação em terapias manuais, com foco no bem-estar, alívio de tensões, relaxamento e qualidade de vida, atendendo diferentes públicos, incluindo gestantes e idosos.`,
+    foto: karlaImg,
+  },
+  {
     id: 8,
     nome: "Laina Camila das Chagas Sanches",
     cargo: "Enfermeira e Doula",
@@ -190,6 +265,22 @@ const profissionais: Profissional[] = [
     foto: luannaSaldanha
   },
   {
+    id: 16,
+    nome: "Mariana Doudement",
+    cargo: "Pediatra",
+    registro: "CRM 11442",
+    especialidades: [
+      "Pediatria",
+      "Acompanhamento de Rotina",
+      "Urgências",
+      "Amamentação",
+      "Introdução Alimentar",
+    ],
+    descricao:
+      "Cada criança tem seu próprio ritmo de crescimento e desenvolvimento, e meu objetivo é acompanhá-la de forma cuidadosa e individualizada. Especialista no cuidado infantil em São Luís, ofereço acompanhamento pediátrico completo para bebês, crianças e adolescentes. Além do atendimento clínico, oriento os pais de forma clara e tranquila, ajudando a transformar dúvidas em segurança. Seja para acompanhamento de rotina, urgências, amamentação ou introdução alimentar, estou aqui para cuidar com carinho e responsabilidade. Prezo pela pontualidade nos horários agendados, garantindo um atendimento organizado e respeitoso para cada família.",
+    foto: marianaImg,
+  },
+  {
     id: 10,
     nome: "Samia Carine dos Santos Varão",
     cargo: "Enfermeira e Doula",
@@ -212,7 +303,7 @@ const profissionais: Profissional[] = [
     id: 11,
     nome: "Sâmya Barros dos Santos ",
     cargo: "Fonoaudióloga",
-    registro: "CRFa: 8-13125",
+    registro: "CRFa 8-13125",
     especialidades: [
       "Otoneurologia",
       "Audiologia Clínica",
@@ -232,6 +323,7 @@ Acredito que cada bebê merece um olhar atento e individualizado. Por isso, proc
 const BREAKPOINT_TABLET = "(max-width: 960px)";
 const BREAKPOINT_MOBILE = "(max-width: 640px)";
 const ESPECIALIDADES_VISIVEIS = 3;
+const SWIPE_THRESHOLD = 50;
 
 
 function getIniciais(nome: string): string {
@@ -345,6 +437,7 @@ function CardProfissional({ prof }: { prof: Profissional }) {
 export default function Profissionais() {
   const [pagina, setPagina] = useState(0);
   const [cardsPorPagina, setCardsPorPagina] = useState(3);
+  const touchStartX = useRef<number | null>(null);
 
   useEffect(() => {
     const mqMobile = window.matchMedia(BREAKPOINT_MOBILE);
@@ -374,6 +467,22 @@ export default function Profissionais() {
   const anterior = () =>
     setPagina((p) => (p === 0 ? totalPaginas - 1 : p - 1));
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const delta = e.changedTouches[0].clientX - touchStartX.current;
+    touchStartX.current = null;
+
+    if (delta > SWIPE_THRESHOLD) {
+      anterior();
+    } else if (delta < -SWIPE_THRESHOLD) {
+      proximo();
+    }
+  };
+
   return (
     <section className="profissionais">
 
@@ -395,7 +504,12 @@ export default function Profissionais() {
           <ChevronLeft size={36} />
         </button>
 
-        <div className="profissionais__grid" data-count={visiveis.length}>
+        <div
+          className="profissionais__grid"
+          data-count={visiveis.length}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           {visiveis.map((prof) => (
             <CardProfissional key={prof.id} prof={prof} />
           ))}

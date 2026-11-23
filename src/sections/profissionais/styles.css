@@ -265,6 +265,7 @@
 .profissionais__indicadores {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 0.55rem;
   margin-top: 2.5rem;
 }
